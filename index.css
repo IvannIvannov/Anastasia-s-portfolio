@@ -1,0 +1,205 @@
+:root {
+  --bg: #fffcf5;
+  --text-dark: #2b211a;
+  --accent: #2b211a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text-dark);
+}
+
+/* NAVIGATION */
+
+.main-nav {
+  width: 100%;
+  background-color: #fffcf5;
+  border-bottom: 2px solid #2b211a;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+.main-nav>ul {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  list-style: none;
+}
+
+.main-nav li {
+  position: relative;
+  list-style: none;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #2b211a;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 10px 5px;
+}
+
+/* DROPDOWN – скрито по подразбиране */
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fffcf5;
+  border: 2px solid #2b211a;
+  list-style: none;
+  padding: 10px 0;
+  width: 220px;
+}
+
+.dropdown li a {
+  display: block;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+
+/* показва се само при hover върху горното li */
+
+.main-nav li:hover>.dropdown {
+  display: block;
+}
+
+/* HERO */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 10%;
+  min-height: 100vh;
+  margin-top: 120px;
+}
+
+.hero-left {
+  max-width: 50%;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: -40px;
+}
+
+.title div {
+  white-space: nowrap;
+}
+
+.title .t1 {
+  margin-left: -100px;
+}
+
+.title .t2 {
+  margin-left: 10px;
+}
+
+.title .t3 {
+  margin-left: 220px;
+}
+
+.title .t4 {
+  margin-left: 570px;
+}
+
+.social-icons {
+  margin: 25px 0;
+  margin-left: 110px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.social-icons a {
+  font-size: 55px;
+  color: var(--text-dark);
+  margin-right: 66px;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+}
+
+.name {
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+
+.divider {
+  width: 580px;
+  height: 3px;
+  background-color: #2b211a;
+  margin: 10px 0 15px;
+  margin-left: 20px;
+}
+
+.location {
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero-right img {
+  width: 440px;
+  height: 580px;
+  object-fit: cover;
+  border-radius: 0;
+  margin-top: 0;
+}
+
+.top-block {
+  margin-bottom: 10px;
+}
+
+.bottom-block {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-right img {
+    width: 80%;
+    margin-top: 30px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}
