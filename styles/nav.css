@@ -1,0 +1,56 @@
+.main-nav {
+  width: 100%;
+  background-color: #fffcf5;
+  border-bottom: 2px solid #2b211a;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+.main-nav>ul {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  list-style: none;
+}
+
+.main-nav li {
+  position: relative;
+  list-style: none;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #2b211a;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 10px 5px;
+}
+
+/* DROPDOWN – скрито по подразбиране */
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fffcf5;
+  border: 2px solid #2b211a;
+  list-style: none;
+  padding: 10px 0;
+  width: 220px;
+}
+
+.dropdown li a {
+  display: block;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+
+/* показва се само при hover върху горното li */
+
+.main-nav li:hover>.dropdown {
+  display: block;
+}
