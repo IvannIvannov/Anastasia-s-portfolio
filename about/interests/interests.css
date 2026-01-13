@@ -1,0 +1,103 @@
+:root {
+    --bg: #fffcf5;
+    --text-dark: #2b211a;
+    --accent: #2b211a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2 колони: снимки вляво, текст вдясно */
+.interests-layout {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 60px 0;
+}
+
+/* Лява колона */
+.images-wrapper {
+    position: relative;
+    flex: 0 0 36%;
+    min-width: 320px;
+    height: 560px;
+}
+
+/* общи стилове за снимките */
+.images-wrapper img {
+    position: absolute;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Горната снимка (anastasia.png) */
+.img1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;     /* беше ~78% */
+  height: 64%;    /* беше ~72% */
+  z-index: 2;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+
+/* Долната снимка (laptop.png) */
+.img2 {
+  top: calc(90% - 105px);  /* коригираме според новата височина */
+  left: 48%;
+  transform: translateX(-50%);
+  width: 54%;     /* беше ~92% */
+  height: 40%;    /* беше ~46% */
+  z-index: 1;
+}
+
+/* Дясна колона */
+.text {
+    flex: 1;
+    padding-top: 10px;
+}
+
+/* Заглавие като на скрийншота, но малко по-умерено */
+.text h1 {
+    font-size: 60px;
+    line-height: 1;
+    margin: 0 0 30px;
+    letter-spacing: -1px;
+    margin-left: 260px;
+}
+
+/* Подзаглавия */
+.text h2 {
+    font-size: 22px;
+    margin: 26px 0 0px;
+    font-weight: 700;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.75;
+
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+
+    max-width: 95ch;
+    margin: 0;
+}
