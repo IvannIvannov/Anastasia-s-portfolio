@@ -16,24 +16,6 @@ body {
     color: var(--text-dark);
 }
 
-:root {
-    --bg: #efe6d8;
-    /* бежово като снимката */
-    --text: #0f0f0f;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    background: var(--bg);
-    color: var(--text);
-}
-
 .social-page {
     min-height: 100vh;
     display: grid;
