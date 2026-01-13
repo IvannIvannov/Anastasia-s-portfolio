@@ -29,8 +29,6 @@
   padding: 10px 5px;
 }
 
-/* DROPDOWN – скрито по подразбиране */
-
 .dropdown {
   display: none;
   position: absolute;
@@ -48,8 +46,6 @@
   font-size: 18px;
   padding: 8px 15px;
 }
-
-/* показва се само при hover върху горното li */
 
 .main-nav li:hover>.dropdown {
   display: block;

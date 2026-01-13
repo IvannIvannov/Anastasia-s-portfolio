@@ -25,12 +25,10 @@ body {
     align-items: start;
 }
 
-/* LEFT */
 .left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* заглавието вляво */
 }
 
 .big-title {
@@ -48,15 +46,12 @@ body {
 
 .stats {
     width: 480px;
-    /* леко по-тясна колона */
     margin: 70px auto 0;
-    /* по-малко разстояние от заглавието */
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 26px;
     margin-left: 20px;
-    /* по-стегнато */
 }
 
 .stat {
@@ -65,18 +60,15 @@ body {
 
 .stat-number {
     font-size: 40px;
-    /* беше 48px */
     font-weight: 800;
     margin-bottom: 2px;
 }
 
 .stat-label {
     font-size: 26px;
-    /* беше 34px */
     font-weight: 600;
 }
 
-/* RIGHT */
 .right{
   display: flex;
   flex-direction: column;
@@ -99,5 +91,5 @@ body {
     margin-left: 80px;
 }
 .right .mockup:last-child {
-  width: 750px;  /* задаваш по-голяма ширина само на втората */
+  width: 750px;
 }

@@ -22,7 +22,6 @@ body {
     padding: 0 20px;
 }
 
-/* 2 колони: снимки вляво, текст вдясно */
 .interests-layout {
     display: flex;
     gap: 10px;
@@ -30,7 +29,6 @@ body {
     padding: 60px 0;
 }
 
-/* Лява колона */
 .images-wrapper {
     position: relative;
     flex: 0 0 36%;
@@ -38,7 +36,6 @@ body {
     height: 560px;
 }
 
-/* общи стилове за снимките */
 .images-wrapper img {
     position: absolute;
     border-radius: 6px;
@@ -46,35 +43,31 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Горната снимка (anastasia.png) */
 .img1 {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50%;     /* беше ~78% */
-  height: 64%;    /* беше ~72% */
+  width: 50%;     
+  height: 64%;    
   z-index: 2;
   margin-top: 50px;
   margin-left: 40px;
 }
 
-/* Долната снимка (laptop.png) */
 .img2 {
-  top: calc(90% - 105px);  /* коригираме според новата височина */
+  top: calc(90% - 105px);  
   left: 48%;
   transform: translateX(-50%);
-  width: 54%;     /* беше ~92% */
-  height: 40%;    /* беше ~46% */
+  width: 54%;     
+  height: 40%;    
   z-index: 1;
 }
 
-/* Дясна колона */
 .text {
     flex: 1;
     padding-top: 10px;
 }
 
-/* Заглавие като на скрийншота, но малко по-умерено */
 .text h1 {
     font-size: 60px;
     line-height: 1;
@@ -83,7 +76,6 @@ body {
     margin-left: 260px;
 }
 
-/* Подзаглавия */
 .text h2 {
     font-size: 22px;
     margin: 26px 0 0px;

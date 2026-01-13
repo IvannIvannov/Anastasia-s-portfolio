@@ -16,8 +16,6 @@ body {
   color: var(--text-dark);
 }
 
-/* HERO */
-
 .hero {
   display: flex;
   justify-content: space-between;
@@ -123,24 +121,4 @@ body {
 .bottom-block {
   margin-top: 0;
   padding-top: 0;
-}
-
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-left {
-    max-width: 100%;
-  }
-
-  .hero-right img {
-    width: 80%;
-    margin-top: 30px;
-  }
-
-  .title {
-    font-size: 32px;
-  }
 }
