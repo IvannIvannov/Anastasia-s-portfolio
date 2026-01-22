@@ -55,3 +55,11 @@
 .main-nav li:hover > .dropdown {
   display: block;
 }
+
+.main-nav {
+  transition: transform 0.35s ease;
+}
+
+.main-nav.nav--hidden {
+  transform: translateY(-100%);
+}
