@@ -5,7 +5,7 @@ body {
 .ugc-nav {
     width: 100%;
     background-color: #fffcf5;
-    border-bottom: 2px solid #2b211a;
+    border-bottom: none;
 }
 
 .ugc-nav__inner {
@@ -16,10 +16,11 @@ body {
 }
 
 .ugc-nav__title {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: 800;
     color: #2b211a;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .ugc-nav__menu {
