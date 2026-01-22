@@ -43,3 +43,59 @@ body {
 .ugc-nav__menu a:hover {
     text-decoration: underline;
 }
+
+.ugc-videos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 26px 22px 60px;
+}
+
+.ugc-videos__title{
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 44px);
+  letter-spacing: -0.02em;
+  margin: 14px 0 26px;
+}
+
+.phones{
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 26px;
+  align-items: start;
+}
+
+.phone{
+  position: relative;
+  background: #0b0b0c;
+  border-radius: 44px;
+  padding: 8px; /* ⬅️ по-тънка рамка */
+  box-shadow: 0 20px 50px rgba(0,0,0,.22);
+}
+
+.phone::before{
+  content: "";
+  position: absolute;
+  top: 15px; /* ⬅️ по-нагоре */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25%; /* ⬅️ по-тесен notch */
+  height: 15px; /* ⬅️ по-тънък */
+  background: #000;
+  border-radius: 999px;
+  z-index: 3;
+}
+
+.phone__screen{
+  border-radius: 36px;
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 9 / 16;
+}
+
+.phone__screen video{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
