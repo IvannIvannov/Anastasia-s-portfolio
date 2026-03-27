@@ -23,12 +23,25 @@
 
         <div class="nav-right">
             <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuPanel">
-                 <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </button>
 
             <div class="menu-panel" id="menuPanel">
                 <ul class="menu-list">
                     <li><a href="/index.html">Home</a></li>
+
+                    <li class="has-submenu">
+                        <button class="submenu-toggle">
+                            Services
+                            <span>+</span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#">Editing</a></li>
+                            <li><a href="#">Brand Content</a></li>
+                            <li><a href="#">SMM</a></li>
+                        </ul>
+                    </li>
+
 
                     <li class="has-submenu">
                         <button class="submenu-toggle">
@@ -44,13 +57,14 @@
 
                     <li class="has-submenu">
                         <button class="submenu-toggle">
-                            Services
+                            About
                             <span>+</span>
                         </button>
                         <ul class="submenu">
-                            <li><a href="#">Editing</a></li>
-                            <li><a href="#">Brand Content</a></li>
-                            <li><a href="#">SMM</a></li>
+                            <li><a href="/about/bio/">About Me</a></li>
+                            <li><a href="/about/social/">Social Media</a></li>
+                            <li><a href="/about/programs/">Programs</a></li>
+                            <li><a href="/about/info/">UGC</a></li>
                         </ul>
                     </li>
 
@@ -63,19 +77,6 @@
                             <li><a href="#">Email</a></li>
                             <li><a href="#">Instagram</a></li>
                             <li><a href="#">TikTok</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="has-submenu">
-                        <button class="submenu-toggle">
-                            About
-                            <span>+</span>
-                        </button>
-                        <ul class="submenu">
-                            <li><a href="/about/bio/">About Me</a></li>
-                            <li><a href="/about/social/">Social Media</a></li>
-                            <li><a href="/about/programs/">Programs</a></li>
-                            <li><a href="/about/info/">UGC</a></li>
                         </ul>
                     </li>
                 </ul>
