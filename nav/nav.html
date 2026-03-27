@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Navigation</title>
 </head>
 
 <body>
@@ -22,35 +22,64 @@
         </div>
 
         <div class="nav-right">
-            <ul class="nav-menu">
-                <li>
-                    <a href="#">Menu</a>
-                    <ul class="dropdown">
-                        <li><a href="/index.html">Home</a></li>
+            <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuPanel">
+                 <i class="fa-solid fa-bars"></i>
+            </button>
 
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Video Editing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
-                        <li><a href="/portfolio/ugc/">UGC</a></li>
+            <div class="menu-panel" id="menuPanel">
+                <ul class="menu-list">
+                    <li><a href="/index.html">Home</a></li>
 
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Editing</a></li>
-                        <li><a href="#">Brand Content</a></li>
-                        <li><a href="#">SMM</a></li>
+                    <li class="has-submenu">
+                        <button class="submenu-toggle">
+                            Portfolio
+                            <span>+</span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#">Video Editing</a></li>
+                            <li><a href="#">Graphic Design</a></li>
+                            <li><a href="/portfolio/ugc/">UGC</a></li>
+                        </ul>
+                    </li>
 
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Email</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">TikTok</a></li>
+                    <li class="has-submenu">
+                        <button class="submenu-toggle">
+                            Services
+                            <span>+</span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#">Editing</a></li>
+                            <li><a href="#">Brand Content</a></li>
+                            <li><a href="#">SMM</a></li>
+                        </ul>
+                    </li>
 
-                        <li><a href="#">About</a></li>
-                        <li><a href="/about/bio/">About Me</a></li>
-                        <li><a href="/about/social/">Social Media</a></li>
-                        <li><a href="/about/programs/">Programs</a></li>
-                        <li><a href="/about/info/">UGC</a></li>
-                    </ul>
-                </li>
-            </ul>
+                    <li class="has-submenu">
+                        <button class="submenu-toggle">
+                            Contact
+                            <span>+</span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">TikTok</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <button class="submenu-toggle">
+                            About
+                            <span>+</span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="/about/bio/">About Me</a></li>
+                            <li><a href="/about/social/">Social Media</a></li>
+                            <li><a href="/about/programs/">Programs</a></li>
+                            <li><a href="/about/info/">UGC</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
