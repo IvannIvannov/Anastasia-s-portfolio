@@ -90,7 +90,7 @@ body::after {
 
 .contact-visual__dots {
     position: absolute;
-    right: 10px;
+    right: 300px;
     bottom: 40px;
     width: 170px;
     height: 170px;
@@ -229,6 +229,117 @@ body::after {
     letter-spacing: 0.3px;
     color: var(--text-soft);
     opacity: 0.95;
+}
+
+.contact-form__dots {
+    position: absolute;
+    right: -60px;
+    bottom: -40px;
+
+    width: 180px;
+    height: 180px;
+
+    background: radial-gradient(circle, var(--dot-accent) 2px, transparent 3px);
+    background-size: 18px 18px;
+
+    opacity: 0.35;
+    z-index: 0;
+}
+
+/* FORM SECTION */
+.contact-form-section {
+    margin-top: -100px;
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-title {
+    font-family: "Georgia", serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ROW */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group.full {
+    width: 100%;
+}
+
+/* LABEL */
+.form-group label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: rgba(166, 124, 82, 0.8);
+    margin-bottom: 6px;
+}
+
+/* INPUT */
+.form-group input,
+.form-group textarea {
+    padding: 14px;
+    border: 1px solid rgba(166, 124, 82, 0.3);
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+/* FOCUS EFFECT */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-main);
+    background: rgba(166, 124, 82, 0.05);
+}
+
+/* TEXTAREA */
+.form-group textarea {
+    resize: none;
+}
+
+/* BUTTON */
+.submit-btn {
+    margin-top: 10px;
+    padding: 16px;
+    border: none;
+    background: #c58f8f;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #b07c7c;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
 }
 
 /* RESPONSIVE */
