@@ -249,10 +249,13 @@ body::after {
 /* FORM SECTION */
 .contact-form-section {
     margin-top: -100px;
+    margin-bottom: -50px;
     max-width: 650px;
 
     margin-left: auto;
     margin-right: auto;
+
+    position: relative;
 }
 
 .form-title {
@@ -323,7 +326,7 @@ body::after {
     margin-top: 10px;
     padding: 16px;
     border: none;
-    background: #c58f8f;
+    background: var(--accent-main);
     color: #fff;
     font-weight: 500;
     letter-spacing: 2px;
@@ -332,7 +335,8 @@ body::after {
 }
 
 .submit-btn:hover {
-    background: #b07c7c;
+    background: var(--accent-hover);
+    transform: translateY(-2px);
 }
 
 /* RESPONSIVE */
