@@ -84,10 +84,12 @@ body {
   aspect-ratio: 9 / 16;
 }
 
-.phone__screen video {
+.phone__screen video{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  transform: scale(1.01); /* ⬅️ това маха линията */
 }
 
 /* OVERLAY */
@@ -97,13 +99,15 @@ body {
   display: flex;
   align-items: flex-end;
   padding: 14px;
+  border-radius: 22px;
+  overflow: hidden;
+
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.5) 0%,
-    rgba(0,0,0,0.15) 25%,
-    transparent 55%
+    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.12) 25%,
+    transparent 60%
   );
-  color: white;
 }
 
 /* BOTTOM TEXT */
