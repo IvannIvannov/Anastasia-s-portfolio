@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" />
 
     <link rel="stylesheet" href="ugc.css" />
     <link rel="stylesheet" href="/nav/nav.css">
@@ -43,49 +44,160 @@
         <div class="phones">
             <article class="phone">
                 <div class="phone__screen">
-                    <video controls playsinline preload="metadata" poster="/videos/posters/p1.jpg">
+                    <video playsinline muted autoplay loop preload="auto">
                         <source src="/images/test.mp4" type="video/mp4">
                     </video>
+
+                    <div class="reel-preview">
+
+                        <div class="reel-preview__play"></div>
+
+                        <div class="reel-preview__bottom">
+                            <span>@yourname</span>
+                            <p>UGC example</p>
+                        </div>
+
+                        <div class="reel-preview__side">
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                    </div>
                 </div>
             </article>
 
             <article class="phone">
                 <div class="phone__screen">
-                    <video controls playsinline preload="metadata" poster="/videos/posters/p2.jpg">
-                        <source src="/videos/products/video2.mp4" type="video/mp4">
+                    <video playsinline muted autoplay loop preload="auto">
+                        <source src="/images/test.mp4" type="video/mp4">
                     </video>
+
+                    <div class="reel-preview">
+
+                        <div class="reel-preview__play"></div>
+
+                        <div class="reel-preview__bottom">
+                            <span>@yourname</span>
+                            <p>UGC example</p>
+                        </div>
+
+                        <div class="reel-preview__side">
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                    </div>
                 </div>
             </article>
 
             <article class="phone">
                 <div class="phone__screen">
-                    <video controls playsinline preload="metadata" poster="/videos/posters/p3.jpg">
-                        <source src="/videos/products/video3.mp4" type="video/mp4">
+                    <video playsinline muted autoplay loop preload="auto">
+                        <source src="/images/test.mp4" type="video/mp4">
                     </video>
+
+                    <div class="reel-preview">
+
+                        <div class="reel-preview__play"></div>
+
+                        <div class="reel-preview__bottom">
+                            <span>@yourname</span>
+                            <p>UGC example</p>
+                        </div>
+
+                        <div class="reel-preview__side">
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                    </div>
                 </div>
             </article>
 
             <article class="phone">
                 <div class="phone__screen">
-                    <video controls playsinline preload="metadata" poster="/videos/posters/p4.jpg">
-                        <source src="/videos/products/video4.mp4" type="video/mp4">
+                    <video playsinline muted autoplay loop preload="auto">
+                        <source src="/images/test.mp4" type="video/mp4">
                     </video>
+
+                    <div class="reel-preview">
+
+                        <div class="reel-preview__play"></div>
+
+                        <div class="reel-preview__bottom">
+                            <span>@yourname</span>
+                            <p>UGC example</p>
+                        </div>
+
+                        <div class="reel-preview__side">
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                    </div>
                 </div>
             </article>
 
             <article class="phone">
                 <div class="phone__screen">
-                    <video controls playsinline preload="metadata" poster="/videos/posters/p5.jpg">
-                        <source src="/videos/products/video5.mp4" type="video/mp4">
+                    <video playsinline muted autoplay loop preload="auto">
+                        <source src="/images/test.mp4" type="video/mp4">
                     </video>
+
+                    <div class="reel-preview">
+
+                        <div class="reel-preview__play"></div>
+
+                        <div class="reel-preview__bottom">
+                            <span>@yourname</span>
+                            <p>UGC example</p>
+                        </div>
+
+                        <div class="reel-preview__side">
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                    </div>
                 </div>
             </article>
+
+            <article class="phone">
+                <div class="phone__screen">
+                    <video playsinline muted autoplay loop preload="auto">
+                        <source src="/images/test.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="reel-preview">
+
+                        <div class="reel-preview__play"></div>
+
+                        <div class="reel-preview__bottom">
+                            <span>@yourname</span>
+                            <p>UGC example</p>
+                        </div>
+
+                        <div class="reel-preview__side">
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
         </div>
     </section>
+
+    <div class="reels-viewer" id="reelsViewer">
+        <div class="reels-container" id="reelsContainer"></div>
+        <button class="reels-close" id="closeReels">&times;</button>
+    </div>
 
     <div id="footer-placeholder"></div>
 
     <script src="/nav/nav.js"></script>
+    <script src="/scripts/ugcReels.js"></script>
     <script src="/footer/footer.js"></script>
 
 </body>
