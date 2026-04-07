@@ -61,7 +61,7 @@ body {
 
 .phones {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
   justify-items: center;
 }
@@ -161,10 +161,35 @@ body {
 .reel-preview__side {
   position: absolute;
   right: 10px;
-  bottom: 70px;
+  bottom: 80px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  gap: 14px;
+}
+
+/* icons */
+.reel-preview__side i{
+  font-size: 20px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+
+/* hover ефект */
+.reel-preview__side i:hover{
+  transform: scale(1.1);
+}
+
+/* heart specific */
+.reel-preview__side i.fa-heart:hover{
+  color: #ff3040;
 }
 
 .reel-preview__side div {
