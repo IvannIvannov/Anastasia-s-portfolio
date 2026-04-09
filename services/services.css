@@ -12,7 +12,7 @@ html {
 .services-hero {
   text-align: center;
   max-width: 900px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 5rem;
 }
 
 .section-label,
@@ -42,7 +42,7 @@ html {
 .services-nav {
   width: 100%;
   background-color: #fffcf5;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -67,52 +67,96 @@ html {
 .services-list {
   display: flex;
   flex-direction: column;
+  gap: 5rem;
+}
+
+.service-section {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
   gap: 3rem;
-}
-
-.service-card {
-  background: #fffaf2;
-  border-radius: 22px;
-  padding: 3rem;
-  box-shadow: 0 20px 60px rgba(197, 143, 124, 0.08);
+  padding: 4rem 0;
+  border-bottom: 1px solid rgba(197, 143, 124, 0.18);
   scroll-margin-top: 120px;
-  transition: transform 0.3s ease;
 }
 
-.service-card:hover {
-  transform: scale(1.01);
+.service-section:last-child {
+  border-bottom: none;
 }
 
-.service-card h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 1.5rem;
+.service-text {
+  max-width: 100%;
+}
+
+.service-text h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  margin-bottom: 2rem;
   color: #2b211a;
   font-weight: 800;
 }
 
-.service-card p:last-child {
-  font-size: 1.05rem;
-  line-height: 1.9;
+.service-text p:last-child {
+  font-size: 1.08rem;
+  line-height: 2;
   color: #5f4b45;
-  max-width: 900px;
+}
+
+.service-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-image img {
+  width: 100%;
+  max-width: 360px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(197, 143, 124, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.service-image img:hover {
+  transform: scale(1.03);
+}
+
+/* alternating layout */
+.service-section:nth-child(even) .service-text {
+  order: 2;
+}
+
+.service-section:nth-child(even) .service-image {
+  order: 1;
+}
+
+@media (max-width: 900px) {
+  .service-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .service-section:nth-child(even) .service-text,
+  .service-section:nth-child(even) .service-image {
+    order: initial;
+  }
+
+  .service-image img {
+    max-width: 100%;
+    height: 300px;
+  }
 }
 
 @media (max-width: 768px) {
-  .services-page {
-    padding: 5rem 6%;
+  .service-section {
+    padding: 3.5rem 0;
   }
 
-  .service-card {
-    padding: 2rem;
-    border-radius: 18px;
+  .service-text h2 {
+    margin-bottom: 1.5rem;
   }
 
-  .services-nav {
-    gap: 16px;
-  }
-
-  .services-nav a {
-    width: 100%;
-    text-align: center;
+  .service-image img {
+    height: 240px;
   }
 }
