@@ -39,10 +39,30 @@ body {
   font-weight: 600;
   padding: 8px 6px;
   display: inline-block;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.ugc-nav__menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #655941;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
 }
 
 .ugc-nav__menu a:hover {
-  text-decoration: underline;
+  color: #655941;
+  transform: translateY(-1px);
+}
+
+.ugc-nav__menu a:hover::after {
+  transform: scaleX(1);
 }
 
 .ugc-videos {
@@ -84,16 +104,17 @@ body {
   aspect-ratio: 9 / 16;
 }
 
-.phone__screen video{
+.phone__screen video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: scale(1.01); /* ⬅️ това маха линията */
+  transform: scale(1.01);
+  /* ⬅️ това маха линията */
 }
 
 /* OVERLAY */
-.reel-preview{
+.reel-preview {
   position: absolute;
   inset: 0;
   display: flex;
@@ -102,12 +123,10 @@ body {
   border-radius: 22px;
   overflow: hidden;
 
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.45) 0%,
-    rgba(0,0,0,0.12) 25%,
-    transparent 60%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0.12) 25%,
+      transparent 60%);
 }
 
 /* BOTTOM TEXT */
@@ -130,7 +149,7 @@ body {
 }
 
 /* PLAY BUTTON */
-.reel-preview__play{
+.reel-preview__play {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -138,7 +157,7 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
@@ -147,7 +166,7 @@ body {
 }
 
 /* triangle */
-.reel-preview__play::before{
+.reel-preview__play::before {
   content: "";
   border-left: 12px solid white;
   border-top: 7px solid transparent;
@@ -156,9 +175,9 @@ body {
 }
 
 /* hover */
-.phone:hover .reel-preview__play{
+.phone:hover .reel-preview__play {
   transform: translate(-50%, -50%) scale(1.1);
-  background: rgba(255,255,255,0.35);
+  background: rgba(255, 255, 255, 0.35);
 }
 
 /* SIDE ICONS */
@@ -173,10 +192,10 @@ body {
 }
 
 /* icons */
-.reel-preview__side i{
+.reel-preview__side i {
   font-size: 20px;
   color: white;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   width: 38px;
   height: 38px;
   display: flex;
@@ -187,12 +206,12 @@ body {
 }
 
 /* hover ефект */
-.reel-preview__side i:hover{
+.reel-preview__side i:hover {
   transform: scale(1.1);
 }
 
 /* heart specific */
-.reel-preview__side i.fa-heart:hover{
+.reel-preview__side i.fa-heart:hover {
   color: #ff3040;
 }
 
@@ -208,7 +227,7 @@ body {
 .reels-viewer {
   position: fixed;
   inset: 0;
-  background: #eae6df; 
+  background: #eae6df;
   z-index: 9999;
   display: none;
 }
@@ -253,7 +272,7 @@ body {
   z-index: 10000;
 }
 
-.scroll-hint{
+.scroll-hint {
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -265,6 +284,13 @@ body {
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, -6px); }
+
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, -6px);
+  }
 }
