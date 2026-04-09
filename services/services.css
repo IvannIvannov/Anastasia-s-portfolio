@@ -7,12 +7,51 @@ html {
   padding: 7rem 8%;
   background-color: #fffcf5;
   color: #3c3333;
+  position: relative;
+  overflow: hidden;
+}
+
+/* decorative background accents */
+.services-page::before,
+.services-page::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(90px);
+  opacity: 0.35;
+}
+
+.services-page::before {
+  width: 280px;
+  height: 280px;
+  background: rgba(152, 135, 128, 0.18);
+  top: 12%;
+  left: -80px;
+  animation: floatSoft 12s ease-in-out infinite;
+}
+
+.services-page::after {
+  width: 320px;
+  height: 320px;
+  background: rgba(101, 89, 65, 0.08);
+  bottom: 10%;
+  right: -100px;
+  animation: floatSoft 16s ease-in-out infinite reverse;
+}
+
+/* keep content above decorations */
+.services-page>* {
+  position: relative;
+  z-index: 1;
 }
 
 .services-hero {
   text-align: center;
   max-width: 900px;
   margin: 0 auto 5rem;
+  animation: fadeUp 1s ease both;
 }
 
 .section-label,
@@ -30,7 +69,14 @@ html {
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  color: #3c3333;
+  background: linear-gradient(90deg,
+      #3c3333,
+      #988780,
+      #3c3333);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 6s linear infinite;
 }
 
 .hero-description {
@@ -96,6 +142,12 @@ html {
   padding: 4rem 0;
   border-bottom: 1px solid rgba(152, 135, 128, 0.18);
   scroll-margin-top: 120px;
+  animation: fadeUp 0.9s ease both;
+  transition: transform 0.35s ease;
+}
+
+.service-section:hover {
+  transform: translateY(-6px);
 }
 
 .service-section:last-child {
@@ -132,11 +184,14 @@ html {
   object-fit: cover;
   border-radius: 24px;
   box-shadow: 0 18px 40px rgba(152, 135, 128, 0.12);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-image img:hover {
   transform: scale(1.03);
+  box-shadow:
+    0 18px 40px rgba(152, 135, 128, 0.12),
+    0 0 30px rgba(152, 135, 128, 0.10);
 }
 
 .service-section:nth-child(even) .service-text {
@@ -191,6 +246,36 @@ html {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatSoft {
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+}
+
+@keyframes shimmerText {
+  to {
+    background-position: 200% center;
   }
 }
 
